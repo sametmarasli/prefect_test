@@ -4,6 +4,10 @@ from prefect import flow, task, get_run_logger
 def speak():
     # logger = get_run_logger()
     # logger.info('Woof!')
+    import os
+
+    
+    get_run_logger().info(os.getcwd())
     get_run_logger().info('Woof!')
 
 @flow

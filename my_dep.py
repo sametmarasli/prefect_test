@@ -13,6 +13,7 @@ deployment = Deployment.build_from_flow(
     name="dep-from-python",
     parameters={"num_barks":3},
     storage=storage_block,
+    path="./"
     )
 
 

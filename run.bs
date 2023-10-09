@@ -1,0 +1,3 @@
+python blocks.py
+python my_dep.py 
+prefect deployment run dog/dep-from-python
