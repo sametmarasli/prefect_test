@@ -1,0 +1,60 @@
+###
+### A complete description of a Prefect Deployment for flow 'dog'
+###
+name: custom-infra
+description: null
+version: 86acc339b720575c374a8c74de2f75f9
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: default-agent-pool
+tags: []
+parameters:
+  num_barks: 3
+schedule: null
+is_schedule_active: true
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: dog
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: 31f18ad5-55c8-46a3-8904-2ac3b4fd710f
+  _block_document_name: process-infra
+  _is_anonymous: false
+  block_type_slug: process
+  _block_type_slug: process
+storage:
+  repository: https://github.com/sametmarasli/prefect_test.git
+  reference: null
+  access_token: null
+  include_git_objects: false
+  _block_document_id: f02ad903-95ed-469e-a898-8fa94333497e
+  _block_document_name: git-storage-block
+  _is_anonymous: false
+  block_type_slug: github
+  _block_type_slug: github
+path: ''
+entrypoint: my_flow.py:dog
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    num_barks:
+      title: num_barks
+      position: 0
+      type: integer
+  required:
+  - num_barks
+  definitions: null
+timestamp: '2023-10-09T13:03:09.742523+00:00'
+triggers: []
+enforce_parameter_schema: null

@@ -3,3 +3,9 @@ prefect deployment build\
     -sb local-file-system/demo-cat-storage-block\
     -ib process/process-infra\
     my_flow.py:dog -a
+
+
+prefect deployment build\
+    -n custom-infra\
+    -sb github/git-storage-block\
+    my_flow.py:dog

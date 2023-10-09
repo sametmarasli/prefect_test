@@ -2,16 +2,16 @@ from prefect.filesystems import LocalFileSystem
 from prefect.infrastructure import Process
 from prefect.filesystems import GitHub
 
-my_storage_block = LocalFileSystem(basepath = '~/cat')
+my_storage_block = LocalFileSystem(basepath = '/home/samet/prefect-tutorial')
 my_storage_block.save(name='storage-block', overwrite=True)
 
-my_process_infra = Process(working_dir = '~/prefect-tutorial')
-my_process_infra.save(name='process-infra', overwrite=True)
+# my_process_infra = Process()
+# my_process_infra.save(name='process-infra', overwrite=True)
 
 
 
 block = GitHub(
-    repository="https://github.com/sametmarasli/prefect_test",
+    repository="https://github.com/sametmarasli/prefect_test.git",
     include_git_objects=False,
 )
 
