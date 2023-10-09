@@ -1,8 +1,8 @@
 from my_flow import dog
 from prefect.deployments import Deployment
-from prefect.filesystems import LocalFileSystem
+from prefect.filesystems import GitHub
 
-storage_block = LocalFileSystem.load('storage-block')
+storage_block =GitHub.load('git-storage-block')
 
 
 deployment = Deployment.build_from_flow(
