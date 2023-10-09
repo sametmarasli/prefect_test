@@ -1,0 +1,5 @@
+prefect deployment build\
+    -n custom-infra\
+    -sb local-file-system/demo-cat-storage-block\
+    -ib process/process-infra\
+    my_flow.py:dog -a
